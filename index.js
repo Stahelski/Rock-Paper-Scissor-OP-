@@ -18,8 +18,8 @@
 // eg må registrere hver gang en vinner
 //
 
-let playerWinns = 0;
-let dataWinns = 0;
+let playerWins = 0;
+let dataWins = 0;
 
 dataFirstTOFive = 0;
 playerFirstTOFive = 0;
@@ -40,11 +40,11 @@ function RPS(userVal, dataIn) {
     (userVal === saks && dataIn === papir) ||
     (userVal === papir && dataIn === stein)
   ) {
-    console.log("Player winns this round!");
-    playerWinns++;
+    console.log("Player wins this round!");
+    playerWins++;
   } else {
-    console.log("Data winns this round!");
-    dataWinns++;
+    console.log("Data wins this round!");
+    dataWins++;
   }
 }
 
@@ -70,11 +70,11 @@ for (let i = 0; i < numGames; i++) {
   }
 
   RPS(userVal, dataIn);
-  console.log(`Current score: Player ${playerWinns} - ${dataWinns} Data`);
+  console.log(`Current score: Player ${playerWins} - ${dataWins} Data`);
 }
 
-if (playerWinns > dataWinns) {
-  console.log("Player Winns the game!");
+if (playerWins > dataWins) {
+  console.log("Player Wins the game!");
 } else {
   console.log("Data has bested you!");
 }
